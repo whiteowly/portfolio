@@ -1,18 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Login from './login'
+import Signup from './signup'
+import SplashScreen from './splash';
 
 function App() {
- 
   return (
-    <>
-      <h1>Lilie's Play</h1>
-      <a href="./login.tsx">Login</a><br />
-      <a href="./register.tsx">Register</a>
-
-    
-    </>
+    <div className="app-shell">
+      <header>
+        <h1>Lilie's Play</h1>
+      </header>
+      <main className="content">
+        <Routes>
+          <Route path="/" element={<SplashScreen />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
