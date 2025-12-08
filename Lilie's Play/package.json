@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:server": "ts-node server.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "@prisma/client": "^7.1.0",
     "bcrypt": "^6.0.0",
     "better-auth": "^1.4.5",

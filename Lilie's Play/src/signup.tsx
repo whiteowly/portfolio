@@ -1,7 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import './signup.css'; 
-function Signup() {
+import { authClient } from "../auth-client";
+
+
+async function Signup() {
    const navigate = useNavigate();
+   const { data, error } = await authClient.signUp.email({
+        email, // user email address
+        password, // user password -> min 8 characters by default
+        name, // user display name
+       
+    }, {
+        onRequest: (ctx) => {
+            //show loading
+        },
+        onSuccess: (ctx) => {
+            //redirect to the dashboard or sign in page
+        },
+        onError: (ctx) => {
+            // display the error message
+            alert(ctx.error.message);
+        },
+});
   return (
     <>  
         <div className="auth-container">
@@ -21,10 +41,7 @@ function Signup() {
         <span onClick={() => navigate('/existing-user')}>Sign In</span>
       </p>
     </div>
-        
-    
     </>
   )
 }
-
 export default Signup

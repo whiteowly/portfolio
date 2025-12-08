@@ -7,8 +7,14 @@ import { prisma } from '../lib/prisma'; // Your Prisma Client instance
 
 const saltRounds = 10;
 
+type SignupBody = {
+    username?: string
+    email?: string
+    password?: string
+}
+
 export async function registerUser(req: Request, res: Response): Promise<Response> {
-    const { username, email, password } = req.body;
+        const { username, email, password } = (req.body as SignupBody);
 
     if (!username || !email || !password) {
         return res.status(400).json({ message: 'Missing required fields.' });
@@ -21,10 +27,10 @@ export async function registerUser(req: Request, res: Response): Promise<Respons
         // 2. Save the user (with the HASHED password) to PostgreSQL
         const newUser = await prisma.user.create({
             data: {
-                username,
-                email,
+                username: username!,
+                email: email!,
                 password_hash,
-                // Default values for other fields are set in schema.prisma
+               
             },
             select: { id: true, username: true, email: true }, // Never return the hash
         });
