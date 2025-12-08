@@ -6,9 +6,18 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma/client"
+ 
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+model User {
+  // Must be named 'User' to get the property 'user' on the client
+  id              Int      @id @default(autoincrement())
+  username        String   @unique
+  email           String   @unique
+  password_hash   String
+  // ... other fields
 }

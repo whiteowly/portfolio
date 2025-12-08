@@ -2,8 +2,8 @@
 import type {  Response } from 'express';
 import type { Request } from 'express';
 import bcrypt from 'bcrypt';
-import { prisma } from '../prisma'; // Your Prisma Client instance
-import { generateAccessToken } from '../services/token.service';
+import { generateAccessToken } from './token.service';
+import { prisma } from '../lib/prisma';
 
 export async function loginUser(req: Request, res: Response): Promise<Response> {
     const { username, password } = req.body;
@@ -11,6 +11,13 @@ export async function loginUser(req: Request, res: Response): Promise<Response> 
     // 1. Find the user in the database
     const user = await prisma.user.findUnique({
         where: { username },
+        select: {
+            id: true,
+            username: true,
+            email: true,
+            password_hash: true,
+            // Add all other fields you need for JWT payload/logic
+        }
     });
 
     if (!user) {

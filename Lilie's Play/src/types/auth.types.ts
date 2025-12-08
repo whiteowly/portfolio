@@ -4,7 +4,5 @@
 export interface IJwtPayload {
     sub: number;       // JWT standard: Subject, storing the User ID
     username: string;
-    universe_xp: number;
-    currency_balance: number;
     // JWT standard claims like exp (expiration) will be added automatically
 }

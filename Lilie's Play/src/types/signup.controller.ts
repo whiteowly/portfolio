@@ -1,7 +1,9 @@
 // src/controllers/signup.controller.ts
 import type { Request, Response } from 'express';
+import { Prisma } from '@prisma/client';
 import bcrypt from 'bcrypt';
-import { prisma } from '../prisma'; // Your Prisma Client instance
+import { prisma } from '../lib/prisma'; // Your Prisma Client instance
+
 
 const saltRounds = 10;
 
@@ -34,7 +36,7 @@ export async function registerUser(req: Request, res: Response): Promise<Respons
 
     } catch (error) {
         // Prisma error code for unique constraint violation (username/email already exists)
-        if (error.code === 'P2002') { 
+        if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') {
             return res.status(409).json({ message: 'Username or email is already taken.' });
         }
         console.error(error);
