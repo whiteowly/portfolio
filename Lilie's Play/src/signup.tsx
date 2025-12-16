@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './auth.css';
 import { authClient } from "../auth-client";
 
@@ -7,6 +7,24 @@ import { authClient } from "../auth-client";
 function Signup() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [dark, setDark] = useState<boolean>(() => {
+    try {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored === 'dark';
+      return typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch (e) {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      if (dark) document.body.classList.add('dark-mode'); else document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    } catch (e) {
+      // ignore
+    }
+  }, [dark]);
 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,11 +53,12 @@ function Signup() {
   return (
     <div className="auth-wrapper">
       <div className="auth-container">
+          <button type="button" aria-label="Toggle theme" className="theme-toggle" onClick={() => setDark(!dark)}>{dark ? '🌙' : '☀️'}</button>
         <div className="lily-graphic">
           <span style={{ fontSize: '24px' }}>🌸</span>
         </div>
         <h2>Create Account</h2>
-        <p className="subtitle">Bloom with the Lilies</p>
+        <p className="subtitle">Lilie's Play</p>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <input name="username" placeholder="Username" required />

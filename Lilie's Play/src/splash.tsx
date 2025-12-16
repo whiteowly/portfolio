@@ -8,8 +8,8 @@ export default function SplashScreen() {
   useEffect(() => {
     console.log('SplashScreen mounted');
     const timer = setTimeout(() => {
-      console.log('Navigating to /login');
-      navigate('/login');
+      console.log('Navigating to /landing');
+      navigate('/landing');
     }, 3000);
     return () => clearTimeout(timer);
   }, [navigate]);
