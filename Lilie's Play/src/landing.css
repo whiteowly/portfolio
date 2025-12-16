@@ -174,7 +174,7 @@ h2 {
     padding: 16px 20px;
     border-radius: 20px;
     border: 2px solid transparent;
-        background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
     color: var(--text-dark);
     transition: all 0.3s ease;
@@ -287,3 +287,50 @@ h2 {
         transform: translate(30px, 30px) rotate(5deg);
     }
 }
+
+/* Landing page layout */
+.landing-root{
+    min-height: calc(100vh - 64px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    color: var(--text-dark);
+}
+
+.landing-hero{
+    max-width: 900px;
+    text-align: center;
+    background: var(--white-glass);
+    padding: 48px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 12px 40px rgba(16,24,32,0.06);
+}
+
+.landing-hero h1{
+    font-size: 2.6rem;
+    margin: 0 0 8px 0;
+    color: var(--text-dark);
+}
+
+.landing-hero .subtitle{
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* Dark-mode overrides for landing */
+body.dark-mode .landing-root{
+    background: radial-gradient(ellipse at bottom left, #071018 0%, #03060a 100%);
+    color: var(--text-dark);
+}
+
+body.dark-mode .landing-hero{
+    background: rgba(10,12,14,0.5);
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .landing-hero h1{ color: var(--text-dark) }

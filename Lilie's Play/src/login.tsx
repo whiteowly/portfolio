@@ -27,7 +27,8 @@ function Login() {
 
   return (
     <div className="auth-wrapper">
-      <div className="auth-container">
+        <div className="auth-container">
+          <button type="button" aria-label="Back to landing" className="back-button" onClick={() => navigate('/Landing')}>← Home</button>
           <button type="button" aria-label="Toggle theme" className="theme-toggle" onClick={() => setDark(!dark)}>{dark ? '🌙' : '☀️'}</button>
         <div className="lily-graphic">
           <span style={{ fontSize: '24px' }}>✨</span>
