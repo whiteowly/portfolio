@@ -5,23 +5,12 @@
 }
 
 body {
-  background-color: #d4d994;
   color: #243014;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 #root {
   min-height: 100vh;
-}
-
-.app-shell {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
 }
 
 .nav-links {
@@ -39,5 +28,3 @@ body {
 .nav-links a:hover {
   text-decoration: underline;
 }
-
-
