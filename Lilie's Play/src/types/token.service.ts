@@ -8,7 +8,7 @@ const JWT_SECRET = process.env.JWT_SECRET!;
 const EXPIRATION = '15m'; 
 
 export function generateAccessToken(user: User): string {
-    // We map the full User object to our smaller, specific payload interface
+   
     const payload: IJwtPayload = {
         sub: user.id, 
         username: user.username,
