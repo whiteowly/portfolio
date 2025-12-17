@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './auth.css';
-import { authClient } from "../auth-client";
+
 
 
 function Signup() {
