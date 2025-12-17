@@ -24,7 +24,6 @@ function Login() {
     }
   }, [dark]);
 
-
   return (
     <div className="auth-wrapper">
         <div className="auth-container">

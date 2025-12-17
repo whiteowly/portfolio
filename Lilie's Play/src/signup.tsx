@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './auth.css';
+import authClient from './lib/authClient';
 
 
 
@@ -30,23 +31,25 @@ function Signup() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    const username = (formData.get('username') as string) || '';
+    const email = (formData.get('email') as string) || '';
+    const password = (formData.get('password') as string) || '';
+    const confirm = (formData.get('confirmPassword') as string) || '';
 
+    if (password !== confirm) {
+      alert('Passwords do not match');
+      return;
+    }
 
-    await authClient.signUp.email({
-      email: formData.get("email") as string,
-      password: formData.get("password") as string,
-      name: formData.get("username") as string,
-    }, {
-      onRequest: () => setLoading(true),
-      onSuccess: () => {
-        setLoading(false);
-        navigate('/login');
-      },
-      onError: (ctx) => {
-        setLoading(false);
-        alert(ctx.error.message);
-      }
-    });
+    setLoading(true);
+    try {
+      await authClient.signup({ email, password, name: username });
+      setLoading(false);
+      navigate('/login');
+    } catch (err: any) {
+      setLoading(false);
+      alert(err?.message || String(err));
+    }
   };
 
 
