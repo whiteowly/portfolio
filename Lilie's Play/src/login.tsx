@@ -58,11 +58,11 @@ function Login() {
               </li>
             </ul>
             <div className="resume-wrap">
-              <a href="/resume.pdf" download className="resume-btn" aria-label="Download resume">Download Resume</a>
+              <a href="/Resume.pdf" download="Jerusalem-Resume.pdf" className="resume-btn" aria-label="Download resume">Download Resume</a>
             </div>
           </div>
           <div className="auth-right">
-            <h1>JERUSALEM</h1>
+            <h2 className="Name-Title">JERUSALEM</h2>
             <p className="subtitle">Available For Hire</p>
 
             <form className="auth-form">

@@ -155,7 +155,10 @@ h2 {
     margin-top: 0;
     letter-spacing: -0.5px;
 }
-
+.Name-Title {
+    font-size: 60px;
+    letter-spacing: -1px;
+}
 .subtitle {
     color: var(--text-light);
     font-size: 1.1rem;
@@ -203,7 +206,13 @@ h2 {
     box-shadow: 0 4px 15px rgba(168, 230, 207, 0.3);
     transform: scale(1.02);
 }
-
+.auth-form p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: left;
+}  
+ 
 .auth-form button {
     width: 100%;
     padding: 16px;
@@ -382,7 +391,7 @@ body.dark-mode .social-link:focus {
     gap: 8px;
     padding: 10px 14px;
     border-radius: 999px;
-    background: var(--lily-pink);
+    background: var(--lily-pink-dark);
     color: #2b2b2b;
     text-decoration: none;
     font-weight: 800;
@@ -395,7 +404,7 @@ body.dark-mode .social-link:focus {
 .resume-btn:hover,
 .resume-btn:focus {
     transform: translateY(-3px);
-    background: var(--lily-pink-dark);
+    background: var(--lily-pink);
     color: #fff;
 }
 
