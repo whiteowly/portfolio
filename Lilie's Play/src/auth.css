@@ -90,9 +90,9 @@
  
 .auth-container {
     width: 100%;
-    max-width: 420px;
-    padding: 40px;
-        background: var(--white-glass);
+    max-width: 1150px;
+    padding: 20px;
+    background: var(--white-glass);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 30px;
@@ -276,6 +276,259 @@ h2 {
     height: 100%;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Layout: place avatar image on the left in a circular frame */
+.auth-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+}
+
+.auth-left {
+    flex: 0 0 auto;
+}
+
+.auth-logo {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border: 4px solid rgba(255,255,255,0.6);
+}
+
+.auth-right {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 640px) {
+    .auth-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .auth-right {
+        text-align: center;
+    }
+}
+
+/* Social icons stacked under avatar */
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-list li { list-style: none }
+
+.social-link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: transparent;
+    color: var(--text-dark);
+    text-decoration: none;
+    /* box-shadow: 0 6px 16px rgba(0,0,0,0.08); */
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    /* border: 1px solid rgba(0,0,0,0.04); */
+}
+
+.social-link:hover,
+.social-link:focus {
+    transform: translateY(-3px);
+    background: var(--lily-green);
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .social-list { flex-direction: row; margin-top: 8px }
+    .social-link { width: 40px; height: 40px }
+}
+
+/* Dark mode overrides for social icons */
+body.dark-mode .social-link {
+    background: rgba(255,255,255,0.06);
+    color: var(--text-dark);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+body.dark-mode .social-link:hover,
+body.dark-mode .social-link:focus {
+    background: var(--lily-green-dark);
+    color: #fff;
+}
+
+/* Resume download button */
+.resume-wrap {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--lily-pink);
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+    transform: translateY(-3px);
+    background: var(--lily-pink-dark);
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .resume-wrap { margin-top: 10px }
+    .resume-btn { padding: 8px 12px }
+}
+
+/* Dark mode for resume button */
+body.dark-mode .resume-btn {
+    background: rgba(255,255,255,0.06);
+    color: var(--text-dark);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark-mode .resume-btn:hover,
+body.dark-mode .resume-btn:focus {
+    background: var(--lily-green-dark);
+    color: #fff;
+}
+
+/* Projects grid and cards */
+.projects-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card .card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--white-glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 36px rgba(31,38,135,0.06);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+    overflow: hidden;
+    min-height: 260px;
+    text-align: left;
+}
+
+.project-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    gap: 8px;
+    flex: 1 1 auto;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.project-card:hover .card-inner,
+.project-card:focus .card-inner {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(31,38,135,0.08);
+}
+
+.project-title {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-size: 27px;
+    color: var(--text-dark);
+    text-align: left;
+    align-self: flex-start;
+}
+
+.project-desc {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.4;
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.project-meta .tech {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.status {
+    padding: 6px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.status.completed { background: #d4f7e0; color: #0b5a2b }
+.status.in-progress { background: #fff0c7; color: #7a4f00 }
+
+/* Dark mode overrides for project cards */
+body.dark-mode .project-card .card-inner {
+    background: rgba(12,12,12,0.45);
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .project-title { color: var(--text-dark) }
+body.dark-mode .project-desc { color: var(--text-light) }
+body.dark-mode .project-meta .tech { color: var(--text-light) }
+
+@media (max-width: 420px) {
+    .projects-grid { grid-template-columns: 1fr }
 }
 
 @keyframes float {
