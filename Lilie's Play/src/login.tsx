@@ -80,20 +80,26 @@ function Login() {
         <h2>My Projects</h2>
         <div className="projects-grid" aria-live="polite">
           {projects && projects.map((p: Project) => (
-            <a key={p.id} className="project-card" href={p.link} target="_blank" rel="noreferrer">
+            <p key={p.id} className="project-card" rel="noreferrer">
               <div className="card-inner">
                 {p.image && <img src={p.image} alt={`${p.title} screenshot`} className="project-thumb" />}
                 <div className="card-body">
                   <h3 className="project-title">{p.title}</h3>
                   <p className={`status ${String(p.status).toLowerCase().replace(/\s+/g, '-')}`}>{p.status}</p>
                   <p className="project-desc">{p.description}</p>
-                  
-                    <p className="tech">{p.tech.join(', ')}</p>
-                    
+                    <div className="tech-list">
+                      {p.tech.map((t, i) => (
+                        <span key={i} className="tech-chip">{t}</span>
+                      ))}
+                    </div>
+                    <div className="resume-wrap">
+                   <a href="/Resume.pdf" download="Jerusalem-Resume.pdf" className="download-btn" aria-label="Download resume">App</a>
+                    </div>
+                   <a href={p.link} target="_blank" rel="noreferrer" className="project-link">Github</a> 
                   
                 </div>
               </div>
-            </a>
+            </p>
           ))}
         </div>
      

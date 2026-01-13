@@ -6,7 +6,7 @@ export const projects = [
     tech: ["React Native", "Search Engine"],
     link: "https://github.com/whiteowly/Pretium",
     image: "/src/assets/pretium.png",
-    status: "",
+  
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const projects = [
     tech: ["React Native", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/Penpad-Mobile",
     image: "/src/assets/PenpadPhone.jpg",
-    status: "",
+    
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const projects = [
     tech: ["Python", "SQLite", "Telegram Bot API"],
     link: "https://github.com/whiteowly/Secret-Santa",
     image: "/src/assets/secret-santa.jpg",
-    status: "",
+    
   },
    {
     id: 5,
@@ -51,7 +51,7 @@ export const projects = [
     tech: ["C++", "Raylib"],
     link: "https://github.com/whiteowly/Checkers",
     image: "/src/assets/checkers.jpg",
-    status: "",
+  
   },
    {
     id: 7,
@@ -60,7 +60,7 @@ export const projects = [
     tech: ["C#", "MySQL"],
     link: "https://github.com/whiteowly/Guesthouse-Management-System",
     image: "/src/assets/Guesthouse.jpg",
-    status: "",
+  
   },
 ];
 
