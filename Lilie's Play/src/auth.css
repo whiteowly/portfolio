@@ -465,7 +465,8 @@ body.dark-mode .resume-btn:focus {
     text-decoration: none;
     margin-top: 12px;
     display: inline-block;
- 
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .project-thumb {
@@ -588,7 +589,8 @@ body.dark-mode .project-meta .tech { color: var(--text-light) }
 .download-btn {
     display: inline-flex;
     align-items: center;
-
+    gap: 9px;
+    margin-right: 8px;
     padding: 2px 14px;
     border-radius: 999px;
     background: var(--lily-green);
@@ -601,10 +603,21 @@ body.dark-mode .project-meta .tech { color: var(--text-light) }
     transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
 }
 
-.resume-btn:hover,
-.resume-btn:focus {
+
+.download-btn:focus {
     transform: translateY(-3px);
-    background: var(--lily-pink);
+    background: var(--lily-green-dark);
+    color: #fff;
+}
+body.dark-mode .download-btn {
+    background: var(--lily-green-dark);
+    color: var(--text-dark);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark-mode .download-btn:hover,
+body.dark-mode .download-btn:focus {
+    background: var(--lily-green);
     color: #fff;
 }
 

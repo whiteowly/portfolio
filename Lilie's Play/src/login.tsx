@@ -92,21 +92,20 @@ function Login() {
                         <span key={i} className="tech-chip">{t}</span>
                       ))}
                     </div>
+                    <div className="project-meta">
                     <div className="resume-wrap">
                    <a href="/Resume.pdf" download="Jerusalem-Resume.pdf" className="download-btn" aria-label="Download resume">App</a>
+                   <a href={p.link} target="_blank" rel="noreferrer" className="download-btn">Github</a> 
                     </div>
-                   <a href={p.link} target="_blank" rel="noreferrer" className="project-link">Github</a> 
+                   
                   
+                </div>
                 </div>
               </div>
             </p>
           ))}
         </div>
-     
 
-
-  
-  
       </div>
     </div>
   );
