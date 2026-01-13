@@ -1,3 +1,5 @@
+
+
 export const projects = [
   {
     id: 1,
@@ -6,6 +8,8 @@ export const projects = [
     tech: ["React Native", "Search Engine"],
     link: "https://github.com/whiteowly/Pretium",
     image: "/src/assets/pretium.png",
+    type: "App",
+    download: "https://expo.dev/accounts/jerobin/projects/Pretium/builds/21f86e6b-c0a3-462f-8fb0-0d7970a793cc",
   
   },
   {
@@ -15,6 +19,8 @@ export const projects = [
     tech: ["React Native", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/Penpad-Mobile",
     image: "/src/assets/PenpadPhone.jpg",
+    type: "App",
+    download: "https://expo.dev/accounts/jerobin/projects/penpad-todo/builds/40af6093-180b-42ac-a3b2-ec658d25d2b5"
     
   },
   {
@@ -25,6 +31,8 @@ export const projects = [
     link: "https://github.com/whiteowly/penpad",
     image: "/src/assets/penpadPC.jpg",
     status: "In Progress",
+    
+    
   },
    {
     id: 4,
@@ -33,6 +41,8 @@ export const projects = [
     tech: ["Python", "SQLite", "Telegram Bot API"],
     link: "https://github.com/whiteowly/Secret-Santa",
     image: "/src/assets/secret-santa.jpg",
+    type: "Bot",
+    downloads: "https://t.me/secretSanta_pickerBot",
     
   },
    {
@@ -43,6 +53,7 @@ export const projects = [
     link: "https://github.com/whiteowly/Maphia",
     image: "/src/assets/maphia.png",
     status: "In Progress",
+    
   },
    {
     id: 6,
@@ -51,6 +62,7 @@ export const projects = [
     tech: ["C++", "Raylib"],
     link: "https://github.com/whiteowly/Checkers",
     image: "/src/assets/checkers.jpg",
+
   
   },
    {
