@@ -308,6 +308,8 @@ h2 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     border: 4px solid rgba(255,255,255,0.6);
 }
+/* Ensure avatar has no internal padding or margin */
+.auth-logo { padding: 0; margin: 0; }
 
 .auth-right {
     flex: 1 1 auto;
@@ -463,6 +465,17 @@ body.dark-mode .resume-btn:focus {
     object-fit: cover;
     display: block;
     border-radius: 0;
+    padding: 0;
+}
+.project-thumb {
+    width: calc(100% + 40px); /* negate the card padding (20px each side) so image reaches edges */
+    margin: -20px -20px 0; /* pull the image to the card edges */
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    padding: 0;
 }
 
 .card-body {

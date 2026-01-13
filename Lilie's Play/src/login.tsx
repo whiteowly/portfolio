@@ -85,11 +85,12 @@ function Login() {
                 {p.image && <img src={p.image} alt={`${p.title} screenshot`} className="project-thumb" />}
                 <div className="card-body">
                   <h3 className="project-title">{p.title}</h3>
+                  <p className={`status ${String(p.status).toLowerCase().replace(/\s+/g, '-')}`}>{p.status}</p>
                   <p className="project-desc">{p.description}</p>
-                  <div className="project-meta">
+                  
                     <p className="tech">{p.tech.join(', ')}</p>
-                    <p className={`status ${String(p.status).toLowerCase().replace(/\s+/g, '-')}`}>{p.status}</p>
-                  </div>
+                    
+                  
                 </div>
               </div>
             </a>
