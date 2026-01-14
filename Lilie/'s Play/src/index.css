@@ -1,0 +1,8 @@
+/* Add a class to enforce a consistent aspect ratio for images */
+.image-aspect-ratio {
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 16 / 9; /* Set desired aspect ratio, e.g., 16:9 */
+  object-fit: cover; /* Ensure the image covers the area */
+  display: block; /* Prevent inline spacing issues */
+}

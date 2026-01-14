@@ -18,3 +18,33 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* Added styles for the contact section */
+.contact-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.contact-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.contact-section p {
+  margin: 0 0 15px;
+  font-size: 1rem;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
