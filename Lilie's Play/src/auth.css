@@ -626,3 +626,19 @@ body.dark-mode .download-btn:focus {
     .resume-wrap { margin-top: 10px }
     .resume-btn { padding: 8px 12px }
 }
+
+/* Lightbulb container styles */
+.lightbulb-container {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+.lightbulb-container canvas {
+  width: 100%;
+  height: 100%;
+}
