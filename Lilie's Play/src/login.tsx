@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import './auth.css';
 import { projects } from './projectsData';
 import type { Project } from './projectsData';
-import { Lightbulb } from "./lightbulb";
 
 function Login() {
 
@@ -27,10 +26,6 @@ function Login() {
 
   return (
     <div className="auth-wrapper">
-<<<<<<< HEAD
-=======
-      <Lightbulb toggleTheme={() => setDark(!dark)} />
->>>>>>> 807988db17b6335498db09dbd4c8fe09de2ef304
       <div className="auth-container">
         <button type="button" aria-label="Toggle theme" className="theme-toggle" onClick={() => setDark(!dark)}>{dark ? '🌙' : '☀️'}</button>
 
@@ -96,19 +91,10 @@ function Login() {
                   </div>
                   <div className="project-meta">
                     <div className="resume-wrap">
-<<<<<<< HEAD
                       {p.download && (
                         <a
                           href={p.download}
                           className="download-btn"
-=======
-                      {p.type && (
-                        <a
-                          href={p.downloads}
-                          download="Jerusalem-Resume.pdf"
-                          className="download-btn"
-                          aria-label="Download resume"
->>>>>>> 807988db17b6335498db09dbd4c8fe09de2ef304
                         >
                           {p.type}
                         </a>
