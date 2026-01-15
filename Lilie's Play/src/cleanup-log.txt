@@ -1,0 +1,15 @@
+Deleted files:
+- App.css
+- App.tsx
+- index.css
+- navbar.css
+- projectsData.d.ts
+- projectsData.js
+- src/assets/* (except PHOTO.png)
+- src/types/*
+- public/* (except Resume.pdf)
+
+Kept files:
+- auth.css
+- login.tsx
+- main.tsx

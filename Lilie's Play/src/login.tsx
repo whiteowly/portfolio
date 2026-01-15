@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import './auth.css';
 import { projects } from './projectsData';
@@ -94,12 +93,10 @@ function Login() {
                   </div>
                   <div className="project-meta">
                     <div className="resume-wrap">
-                      {p.type && (
+                      {p.download && (
                         <a
-                          href={p.downloads}
-                          download="Jerusalem-Resume.pdf"
+                          href={p.download}
                           className="download-btn"
-                          aria-label="Download resume"
                         >
                           {p.type}
                         </a>

@@ -6,6 +6,8 @@ export interface Project {
   link: string;
   image?: string;
   status: string;
+  type?: string; // Added optional 'type' property
+  download?: string; // Added optional 'download' property
 }
 
 declare const projects: Project[];
