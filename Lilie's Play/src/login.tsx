@@ -66,7 +66,7 @@ function Login() {
             <form className="auth-form" action="mailto:jerryayalew696@gmail.com" method="post" encType="text/plain">
               <h2>HI! I'm Jer.</h2>
               <p>A software engineer who has stepped foot in most development realms but is now focusing mainly on mobile apps and a little bit of web apps.
-                I also love <a href="https://wave-aunt-f1c.notion.site/Feels-28f6f0bd6c9e80d18633daac58489f06?source=copy_link" target="_blank" rel="noreferrer">blogging!</a>
+                I also love <a href="https://jerblogs.super.site" target="_blank" rel="noreferrer" className='blog-link'>blogging!</a>
               </p>
             </form>
 

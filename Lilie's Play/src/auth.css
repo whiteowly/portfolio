@@ -496,7 +496,11 @@ body.dark-mode .resume-btn:focus {
     text-align: left;
 }
 
-
+.blog-link {
+    color: var(--lily-pink-dark);
+    font-weight: 700;
+    text-decoration: underline;
+}
 .project-card:focus .card-inner {
     transform: translateY(-6px);
     box-shadow: 0 16px 36px rgba(31,38,135,0.08);
