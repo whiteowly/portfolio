@@ -7,7 +7,7 @@ export const projects = [
     description: "Take a Picture and Scan. Get Price Estimates.",
     tech: ["React Native", "Search Engine"],
     link: "https://github.com/whiteowly/Pretium",
-    image: "/src/assets/pretium.png",
+    image: "/pretium.png",
     type: "App",
     download: "https://expo.dev/accounts/jerobin/projects/Pretium/builds/21f86e6b-c0a3-462f-8fb0-0d7970a793cc",
   
@@ -18,7 +18,7 @@ export const projects = [
     description: "A simple To-Do app with shared task management features.",
     tech: ["React Native", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/Penpad-Mobile",
-    image: "/src/assets/PenpadPhone.jpg",
+    image: "/PenpadPhone.jpg",
     type: "App",
     download: "https://expo.dev/accounts/jerobin/projects/penpad-todo/builds/40af6093-180b-42ac-a3b2-ec658d25d2b5"
     
@@ -29,7 +29,7 @@ export const projects = [
     description: "Desktop app for monitoring your daily life.",
     tech: ["React", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/penpad",
-    image: "/src/assets/penpadPC.jpg",
+    image: "/penpadPC.jpg",
     status: "In Progress",
     
     
@@ -40,7 +40,7 @@ export const projects = [
     description: "A Telegram bot that organizes Secret Santa gift exchanges.",
     tech: ["Python", "SQLite", "Telegram Bot API"],
     link: "https://github.com/whiteowly/Secret-Santa",
-    image: "/src/assets/secret-santa.jpg",
+    image: "/secret-santa.jpg",
     type: "Bot",
     downloads: "https://t.me/secretSanta_pickerBot",
     
@@ -51,7 +51,7 @@ export const projects = [
     description: "A mobile game that organizes mafia games among friends.",
     tech: ["React Native", "BetterAuth", "Node.js"],
     link: "https://github.com/whiteowly/Maphia",
-    image: "/src/assets/maphia.png",
+    image: "/maphia.png",
     status: "In Progress",
     
   },
@@ -61,7 +61,7 @@ export const projects = [
     description: "Chceckers game with UI",
     tech: ["C++", "Raylib"],
     link: "https://github.com/whiteowly/Checkers",
-    image: "/src/assets/checkers.jpg",
+    image: "/checkers.jpg",
 
   
   },
@@ -71,7 +71,7 @@ export const projects = [
     description: "Guesthouse frontdesk management system",
     tech: ["C#", "MySQL"],
     link: "https://github.com/whiteowly/Guesthouse-Management-System",
-    image: "/src/assets/Guesthouse.jpg",
+    image: "/Guesthouse.jpg",
   
   },
 ];
