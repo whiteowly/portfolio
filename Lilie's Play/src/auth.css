@@ -5,7 +5,7 @@
     --lily-green-dark: #a8e6cf;
     --lily-pink: #ffd3b6;
     --lily-pink-dark: #ffaaa5;
-    --lily-purple: #e2f0cb;
+    --lily-purple: #C7B7A3;
     --text-dark: #5d5d5d;
     --text-light: #8b8b8b;
     --white-glass: rgba(255, 255, 255, 0.65);
@@ -558,14 +558,15 @@ body.dark-mode .tech-chip {
 }
 
 .status {
-    padding: 6px 8px;
-    border-radius: 999px;
+    padding: 3px 4px;
+    border-radius: 10px;
     font-size: 0.75rem;
     font-weight: 800;
+    
 }
 
-.status.completed { background: #d4f7e0; color: #0b5a2b }
-.status.in-progress { background: #fff0c7; color: #7a4f00 }
+.status.completed { background: var(--lily-pink-dark); color: #0b5a2b }
+.status.in-progress { background: var(--lily-purple); color: var(--text-dark) }
 
 /* Dark mode overrides for project cards */
 body.dark-mode .project-card .card-inner {
@@ -684,4 +685,20 @@ body.dark-mode .download-btn:focus {
 @media (max-width: 640px) {
     .resume-wrap { margin-top: 10px }
     .resume-btn { padding: 8px 12px }
+}
+
+/* Lightbulb container styles */
+.lightbulb-container {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+.lightbulb-container canvas {
+  width: 100%;
+  height: 100%;
 }
