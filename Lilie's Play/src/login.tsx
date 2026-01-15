@@ -31,7 +31,7 @@ function Login() {
 
         <div className="auth-content">
           <div className="auth-left">
-            <img src="/src/PHOTO.png" alt="Logo" className="auth-logo" />
+            <img src="/PHOTO.png" alt="Logo" className="auth-logo" />
             <ul className="social-list" aria-label="Social links">
               <li>
                 <a href="https://github.com/whiteowly" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-link">
