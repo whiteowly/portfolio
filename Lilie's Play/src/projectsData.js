@@ -7,7 +7,7 @@ export const projects = [
     description: "Take a Picture and Scan. Get Price Estimates.",
     tech: ["React Native", "Search Engine"],
     link: "https://github.com/whiteowly/Pretium",
-    image: "/pretium.png",
+    image: "/Pretium.png",
     type: "App",
     download: "https://expo.dev/accounts/jerobin/projects/Pretium/builds/21f86e6b-c0a3-462f-8fb0-0d7970a793cc",
   
@@ -61,7 +61,7 @@ export const projects = [
     description: "Chceckers game with UI",
     tech: ["C++", "Raylib"],
     link: "https://github.com/whiteowly/Checkers",
-    image: "/checkers.jpg",
+    image: "/Checkers.jpg",
 
   
   },
