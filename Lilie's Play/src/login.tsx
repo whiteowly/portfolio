@@ -77,7 +77,7 @@ function Login() {
           {projects && projects.map((p: Project) => (
             <p key={p.id} className="project-card" rel="noreferrer">
               <div className="card-inner">
-                {p.image && <img src={p.image} alt={`${p.title} screenshot`} className="project-thumb" style={{ objectFit: 'cover', aspectRatio: '16/9', width: '100%', height: 'auto' }} />}
+                {p.image && <img src={p.image} alt={`${p.title} screenshot`} className="project-thumb" style={{ objectFit: 'cover', aspectRatio: '16/9', width: '113%', height: 'auto' }} />}
                 <div className="card-body">
                   <div className="project-meta">
                   <h3 className="project-title">{p.title}</h3>
