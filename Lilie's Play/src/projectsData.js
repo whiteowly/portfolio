@@ -20,7 +20,7 @@ export const projects = [
     link: "https://github.com/whiteowly/Penpad-Mobile",
     image: "/PenpadPhone.jpg",
     type: "App",
-    download: "https://github.com/whiteowly/Penpad-Mobile/releases/latest/download/application-40af6093-180b-42ac-a3b2-ec658d25d2b5.apk"
+    download: "https://github.com/whiteowly/Penpad-Mobile/releases/latest/download/Penpad.apk"
     
   },
   {
