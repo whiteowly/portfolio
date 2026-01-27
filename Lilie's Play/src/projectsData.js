@@ -52,7 +52,8 @@ export const projects = [
     tech: ["React Native", "BetterAuth", "Node.js"],
     link: "https://github.com/whiteowly/Maphia",
     image: "/maphia.png",
-    download: "https://maphia.jer.works"
+    download: "https://maphia.jer.works",
+    type: "Site/App", 
     
   },
    {
