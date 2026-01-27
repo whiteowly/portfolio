@@ -9,7 +9,7 @@ export const projects = [
     link: "https://github.com/whiteowly/Pretium",
     image: "/Pretium.png",
     type: "App",
-    download: "https://expo.dev/accounts/jerobin/projects/Pretium/builds/21f86e6b-c0a3-462f-8fb0-0d7970a793cc",
+    download: "https://github.com/whiteowly/Pretium/releases/latest/download/Pretium.apk",
   
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     link: "https://github.com/whiteowly/Penpad-Mobile",
     image: "/PenpadPhone.jpg",
     type: "App",
-    download: "https://expo.dev/accounts/jerobin/projects/penpad-todo/builds/40af6093-180b-42ac-a3b2-ec658d25d2b5"
+    download: "https://github.com/whiteowly/Penpad-Mobile/releases/latest/download/application-40af6093-180b-42ac-a3b2-ec658d25d2b5.apk"
     
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
     tech: ["React Native", "BetterAuth", "Node.js"],
     link: "https://github.com/whiteowly/Maphia",
     image: "/maphia.png",
-    status: "In Progress",
+    download: "https://maphia.jer.works"
     
   },
    {
