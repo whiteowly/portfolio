@@ -30,7 +30,8 @@ export const projects = [
     tech: ["React", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/penpad",
     image: "/penpadPC.jpg",
-    status: "In Progress",
+    type: "site",
+    download: "https://penpad.jer.works",
     
     
   },
@@ -51,7 +52,7 @@ export const projects = [
     description: "A mobile game that organizes mafia games among friends.",
     tech: ["React Native", "BetterAuth", "Node.js"],
     link: "https://github.com/whiteowly/Maphia",
-    image: "/maphia.png",
+    image: "/maphia.jgp",
     download: "https://maphia.jer.works",
     type: "Site/App", 
     
