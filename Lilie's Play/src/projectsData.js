@@ -52,7 +52,7 @@ export const projects = [
     description: "A mobile game that organizes mafia games among friends.",
     tech: ["React Native", "BetterAuth", "Node.js"],
     link: "https://github.com/whiteowly/Maphia",
-    image: "/maphia.jgp",
+    image: "/maphia.jpg",
     download: "https://maphia.jer.works",
     type: "Site/App", 
     
