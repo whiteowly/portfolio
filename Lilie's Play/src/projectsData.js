@@ -76,6 +76,16 @@ export const projects = [
     image: "/Guesthouse.jpg",
   
   },
+  {
+    id: 8,
+    title: "StitchLog",
+    description: "A Mobible app for tailors to store customer measurements, order details also verify payments.",
+    tech: ["React Native", "Supabase", "bonno"],
+    image: "/stitchLog.jpg",
+    download: "https://stitchlog.jer.works",
+    type: "Site/App", 
+    
+  },
 ];
 
 // Provide default export as a fallback for consumers importing the module differently
