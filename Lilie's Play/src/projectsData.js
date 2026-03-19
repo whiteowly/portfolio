@@ -29,7 +29,7 @@ export const projects = [
     description: "Desktop app for monitoring your daily life.",
     tech: ["React", "Firebase", "Firestore"],
     link: "https://github.com/whiteowly/penpad",
-    image: "/pen1.jpg",
+    image: "/pen1.png",
     type: "site",
     download: "https://penpad.jer.works",
     
