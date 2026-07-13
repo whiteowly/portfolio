@@ -1,3 +1,12 @@
+/**
+ * @typedef {Object} WorkExperience
+ * @property {number} id
+ * @property {string} company
+ * @property {string} position
+ * @property {string} year
+ */
+
+/** @type {WorkExperience[]} */
 export const workExperience = [
   {
     id: 1,
