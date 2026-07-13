@@ -4,6 +4,7 @@
  * @property {string} company
  * @property {string} position
  * @property {string} year
+ * @property {string} logo
  */
 
 /** @type {WorkExperience[]} */
@@ -13,12 +14,14 @@ export const workExperience = [
     company: "EaglePoint.AI",
     position: "Software Consultant",
     year: "2026",
+    logo: "/EPLOGO.png",
   },
   {
     id: 2,
     company: "Afterquery",
     position: "DevOps Engineer",
     year: "2026",
+    logo: "/AQLOGO.png",
   },
 ];
 

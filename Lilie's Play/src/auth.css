@@ -432,18 +432,22 @@ body.dark-mode .resume-btn:focus {
     margin-top: 22px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 12px;
 }
 
 .work-exp-item {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
+    flex-direction: row;
+    gap: 10px;
+    padding: 12px;
     border-radius: 12px;
     background: var(--white-glass);
     border: 1px solid var(--glass-border);
     box-shadow: 0 10px 36px rgba(31,38,135,0.06);
     transition: transform 0.16s ease, box-shadow 0.16s ease;
+    overflow: visible;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .work-exp-item:hover {
@@ -451,11 +455,26 @@ body.dark-mode .resume-btn:focus {
     box-shadow: 0 12px 48px rgba(31,38,135,0.12);
 }
 
+.exp-logo {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
 .exp-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 0;
+    padding: 0;
+    flex: 1;
+    gap: 12px;
 }
 
 .exp-info {
@@ -467,7 +486,7 @@ body.dark-mode .resume-btn:focus {
 
 .company-name {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: var(--text-dark);
     letter-spacing: -0.5px;
@@ -475,15 +494,16 @@ body.dark-mode .resume-btn:focus {
 
 .year {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-light);
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .position {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--lily-pink-dark);
 }

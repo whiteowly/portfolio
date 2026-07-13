@@ -3,6 +3,7 @@ export interface WorkExperience {
   company: string;
   position: string;
   year: string;
+  logo: string;
 }
 
 declare const workExperience: WorkExperience[];
