@@ -3,6 +3,7 @@ import './auth.css';
 import { projects } from './projectsData';
 import { workExperience } from './workExperienceData';
 import type { Project } from './projectsData';
+import type { WorkExperience } from './workExperienceData';
 
 function Login() {
   const [dark, setDark] = useState<boolean>(() => {
@@ -103,7 +104,7 @@ function Login() {
         </div>
         <h2>Work Experience</h2>
         <div className="work-experience-container" aria-live="polite">
-          {workExperience && workExperience.map((exp) => (
+          {workExperience && workExperience.map((exp: WorkExperience) => (
             <div key={exp.id} className="work-exp-item">
               <div className="exp-header">
                 <div className="exp-info">
