@@ -82,8 +82,8 @@ export const projects = [
     description: "A Mobible app for tailors to store customer measurements, order details also verify payments.",
     tech: ["React Native", "Supabase", "bonno"],
     image: "/stitchLog.jpg",
-    download: "https://stitchlog.jer.works",
-    type: "Site/App", 
+  
+   
     
   },
 ];
