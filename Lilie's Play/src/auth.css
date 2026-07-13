@@ -427,6 +427,80 @@ body.dark-mode .resume-btn:focus {
     color: #fff;
 }
 
+/* Work Experience Section */
+.work-experience-container {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.work-exp-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--white-glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 36px rgba(31,38,135,0.06);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.work-exp-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(31,38,135,0.12);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.exp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.company-name {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+}
+
+.year {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+.position {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--lily-pink-dark);
+}
+
+body.dark-mode .work-exp-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+body.dark-mode .company-name {
+    color: var(--text-dark);
+}
+
+body.dark-mode .position {
+    color: var(--lily-green-dark);
+}
+
 /* Projects grid and cards */
 .projects-grid {
     margin-top: 22px;

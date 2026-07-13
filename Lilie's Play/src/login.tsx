@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './auth.css';
 import { projects } from './projectsData';
+import { workExperience } from './workExperienceData';
 import type { Project } from './projectsData';
 
 function Login() {
@@ -27,7 +28,7 @@ function Login() {
         <button type="button" aria-label="Toggle theme" className="theme-toggle" onClick={() => setDark(!dark)}>{dark ? '🌙' : '☀️'}</button>
         <div className="auth-content">
           <div className="auth-left">
-            <img src="/PHOTO.png" alt="Logo" className="auth-logo" />
+            <img src="/PHOTO1.jpg" alt="Logo" className="auth-logo" />
            <ul className="social-list" aria-label="Social links">
               <li>
                 <a href="https://github.com/whiteowly" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-link">
@@ -56,12 +57,11 @@ function Login() {
           </div>
           <div className="auth-right">
             <h2 className="Name-Title">JERUSALEM</h2>
-            <p className="subtitle">Available For Hire</p>
+           
             {/* Moved the compact message input to the auth-right section */}
             <form className="auth-form" action="mailto:jerryayalew696@gmail.com" method="post" encType="text/plain">
               <h2>HI! I'm Jer.</h2>
               <p>A software engineer who has stepped foot in most development realms but is now focusing mainly on mobile apps and a little bit of web apps.
-                I also love <a href="https://jerblogs.super.site" target="_blank" rel="noreferrer" className='blog-link'>blogging!</a>
               </p>
             </form>
           </div>
@@ -99,6 +99,20 @@ function Login() {
                 </div>
               </div>
             </p>
+          ))}
+        </div>
+        <h2>Work Experience</h2>
+        <div className="work-experience-container" aria-live="polite">
+          {workExperience && workExperience.map((exp) => (
+            <div key={exp.id} className="work-exp-item">
+              <div className="exp-header">
+                <div className="exp-info">
+                  <h3 className="company-name">{exp.company}</h3>
+                  <p className="position">{exp.position}</p>
+                </div>
+                <p className="year">{exp.year}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
